@@ -1,68 +1,44 @@
 class BluraysController < ApplicationController
+    before_action :find_bluray, only: [:show, :edit, :update, :destroy]
 
-  before_action :find_bluray, only: [:show, :edit, :update, :destroy]
+    def index
+        @blurays = Bluray.all
+    end
 
-def index
+    def show
+    end
 
-  @blurays = Bluray.all
+    def new
+        @bluray = Bluray.new
+    end
 
-end
+    def create
+        @bluray = Bluray.create(bluray_params)
+        redirect_to bluray_path(@bluray)
+    end
 
+    def edit
+    end
 
-def show
+    def update
+        @bluray.update(bluray_params)
+        @bluray.save
+        redirect_to bluray_path(@bluray)
+    end
 
-end
+    def destroy
+        @bluray.destroy
+        flash[:notice] = "Bluray Deleted"
+        redirect_to blurays_path
+    end
 
-def new
+    private
 
-  @bluray = Bluray.new
+    def find_bluray
+        @bluray = Bluray.find(params[:id])
+    end
 
-end
-
-def create
-
-  @bluray = Bluray.create(bluray_params)
-  redirect_to bluray_path(@bluray)
-
-end
-
-
-def edit
-
-
-end
-
-def update
-
-  @bluray.update(bluray_params)
-  @bluray.save
-  redirect_to bluray_path(@bluray)
-
-end
-
-
-def destroy
-
-  @bluray.destroy
-  flash[:notice] = "Bluray Deleted"
-  redirect_to blurays_path
-
-end
-
-
-private
-
-def find_bluray
-
-  @bluray = Bluray.find(params[:id])
-
-end
-
-def bluray_params
-
-  params.require(:bluray).permit(:title, :actor, :year, :genre, :director)
-
-end
-
-
+    def bluray_params
+        params.require(:bluray).permit(:title, :actor, :year, :genre, :director)
+    end
 end
