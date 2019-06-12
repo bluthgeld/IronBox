@@ -17,3 +17,10 @@ br1 = Bluray.find_or_create_by(title: "Rear Window", actor: "Jimmy Stewart", gen
 br2 = Bluray.find_or_create_by(title: "Vertigo", actor: "Jimmy Stewart", genre: "Suspense", year: "1949", director: "Alfred Hitchock")
 br3 = Bluray.find_or_create_by(title: "Die Hard", actor: "Bruce Willis", genre: "Action", year: "1989  ", director: "John McTiernan")
 br4 = Bluray.find_or_create_by(title: "Hard Boiled", actor: "Yun-Fat Chow", genre: "Action", year: "1992", director: "John Woo")
+
+
+r1 = Rental.find_or_create_by(name: "Game Stop", renter_id: 11, bluray_id: 4)
+r2 = Rental.find_or_create_by(name: "Wheaton", renter_id: 10, bluray_id: 2)
+r3 = Rental.find_or_create_by(name: "Silver Spring", renter_id: 4, bluray_id: 3)
+r4 = Rental.find_or_create_by(name: "K Street", renter_id: 3, bluray_id: 1)
+r5 = Rental.find_or_create_by(name: "Virginia Ave.", renter_id: 1, bluray_id: 4)

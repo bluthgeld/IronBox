@@ -6,4 +6,11 @@
 <h2>Genre: <%= @bluray.genre %></h2>
 <h2>Director:  <%= @bluray.director %></h2>
 
-<%= link_to "Delete This Bluray", bluray_path(@bluray), method: :delete %>
+<%= link_to "Edit this Bluray", edit_bluray_path(@bluray) %>
+
+<%= link_to "All Bluray", blurays_path %>
+<br><br>
+
+<%= form_tag @bluray, method: "DELETE" do %>
+  <%= submit_tag "Delete" %>
+  <% end %>

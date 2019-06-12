@@ -43,6 +43,7 @@ class RentersController < ApplicationController
   def destroy
 
     @renter.destroy
+    flash[:notice] = "Renter Deleted"
     redirect_to renters_path
 
   end

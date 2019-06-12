@@ -1,0 +1,11 @@
+<%= form_for @rental  do |f| %>
+   <h3><%= f.label :name, "Name:"%>
+   <%= f.text_field :name %></h3>
+
+<h3>   <%= f.label :renter_id %>
+       <%= f.collection_select(:renter_id, Renter.all, :id, :full_name, {:prompt => 'Choose a Renter'}) %></h3>
+
+<h3>   <%= f.label :bluray_id %>
+       <%= f.collection_select(:bluray_id, Bluray.all, :id, :title, {:prompt => 'Choose a Title'}) %></h3>
+   <%= f.submit "Add" %></h3>
+<% end %>

@@ -44,6 +44,7 @@ end
 def destroy
 
   @bluray.destroy
+  flash[:notice] = "Bluray Deleted"
   redirect_to blurays_path
 
 end
