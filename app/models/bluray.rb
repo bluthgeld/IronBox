@@ -1,0 +1,2 @@
+class Bluray < ApplicationRecord
+end

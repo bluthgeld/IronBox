@@ -1,0 +1,2 @@
+class BluraysController < ApplicationController
+end
