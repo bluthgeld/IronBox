@@ -1,0 +1,8 @@
+<h1>Renter</h1>
+
+<p>First Name: <%= @renter.first_name %></p>
+<p>Last Name: <%= @renter.last_name %></p>
+<p>Email: <%= @renter.email_address %></p>
+<p>Phone: <%= @renter.phone %></p>
+
+<%= link_to "Delete This", renter_path(@renter), method: :delete %>

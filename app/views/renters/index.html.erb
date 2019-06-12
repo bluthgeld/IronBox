@@ -1,0 +1,7 @@
+<h1>These are the Renters</h1>
+
+<ul>
+  <% @renters.each do |renter| %>
+  <li> <%= link_to renter.full_name, renter_path(renter) %> </li>
+  <% end %>
+</ul>
