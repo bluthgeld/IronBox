@@ -1,0 +1,9 @@
+<h1><%= @bluray.title %> <%= @bluray.year %></h1>
+
+<h2>Title: <%= @bluray.title %></h2>
+<h2>Actor: <%= @bluray.actor %></h2>
+<h2>Year: <%= @bluray.year %></h2>
+<h2>Genre: <%= @bluray.genre %></h2>
+<h2>Director:  <%= @bluray.director %></h2>
+
+<%= link_to "Delete This Bluray", bluray_path(@bluray), method: :delete %>

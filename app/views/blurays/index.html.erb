@@ -1,0 +1,7 @@
+<h1>Available Blurays</h1>
+
+<ul>
+  <% @blurays.each do |bluray| %>
+  <li> <%= link_to bluray.title, bluray_path(bluray) %> </li>
+  <% end %>
+</ul>

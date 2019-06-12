@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_12_154129) do
+ActiveRecord::Schema.define(version: 2019_06_12_174941) do
 
   create_table "blurays", force: :cascade do |t|
     t.string "title"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_06_12_154129) do
     t.integer "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "director"
   end
 
   create_table "renters", force: :cascade do |t|

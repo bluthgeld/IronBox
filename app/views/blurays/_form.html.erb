@@ -1,0 +1,13 @@
+<%= form_for @bluray do |f| %>
+  <%= f.label :title, "Title: " %>
+  <%= f.text_field :title %><br>
+  <%= f.label :actor, "Actor: " %>
+  <%= f.text_field :actor %><br>
+  <%= f.label :year, "Year: " %>
+  <%= f.text_field :year %><br>
+  <%= f.label :genre, "genre " %>
+  <%= f.text_field :genre %><br>
+  <%= f.label :director, "director: " %>
+  <%= f.text_field :director %><br>
+  <%= f.submit %>
+<% end %>
