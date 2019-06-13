@@ -1,7 +1,7 @@
 <h1>These are the Rentals</h1>
 
 <ul>
-  <% @rentals.each do |rental| %>
-  <li> <%= link_to rental.rental_info, rental_path(rental) %> </li>
-  <% end %>
+    <% @rentals.each do |rental| %>
+        <li> <%= link_to rental.rental_info, rental_path(rental) %> </li>
+    <% end %>
 </ul>

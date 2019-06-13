@@ -1,17 +1,6 @@
 class RentersController < ApplicationController
+    before_action :find_renter, only: [:show, :edit, :update, :destroy]
 
-  before_action :find_renter, only: [:show, :edit, :update, :destroy]
-
-  def index
-
-    @renters = Renter.all
-
-  end
-
-  def show
-
-
-  end
 
 
   def new
@@ -54,17 +43,12 @@ class RentersController < ApplicationController
 
 private
 
-def find_renter
 
-  @renter = Renter.find(params[:id])
+    def find_renter
+        @renter = Renter.find(params[:id])
+    end
 
-end
-
-def renter_params
-
-  params.require(:renter).permit(:first_name, :last_name, :email_address, :phone, :creditc)
-
-end
-
-
+    def renter_params
+        params.require(:renter).permit(:first_name, :last_name, :email_address, :phone, :creditc)
+    end
 end
