@@ -5,4 +5,6 @@
 <p>Email: <%= @renter.email_address %></p>
 <p>Phone: <%= @renter.phone %></p>
 
+<%= link_to "Update this Renter", edit_renter_path(@renter) %>
+
 <%= link_to "Delete This Renter", renter_path(@renter), method: :delete %>

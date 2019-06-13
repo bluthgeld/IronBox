@@ -21,10 +21,13 @@ class RentersController < ApplicationController
   end
 
   def create
-
     @renter = Renter.create(renter_params)
-    redirect_to renter_path(@renter)
-
+    if @renter.valid?
+      @renter.save
+      redirect_to renter_path(@renter)
+    else
+      render :new
+    end
   end
 
   def edit
